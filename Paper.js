@@ -2,9 +2,9 @@ class Paper {
     constructor(x, y,radius) {
       var options = {
 
-        restitution : 0.1,
-        density : 1,
-        friction : 1
+        'restitution':0.2,
+        'friction':0.2,
+        'density':1
 
       }
       this.body = Bodies.circle(x, y,radius, options);
