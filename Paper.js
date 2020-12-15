@@ -2,12 +2,12 @@ class Paper {
     constructor(x, y,radius) {
       var options = {
 
-        'restitution':0.2,
+        'restitution':0.5,
         'friction':0.2,
-        'density':1
+        'density':0.8
 
       }
-      this.body = Bodies.circle(x, y,radius, options);
+      this.body = Bodies.circle(x, y,radius/2, options);
       this.radius = radius;
 
       World.add(world, this.body);
@@ -17,7 +17,7 @@ class Paper {
 
       ellipseMode(CENTER);
       fill("purple");
-      ellipse(pos.x,pos.y, this.radius);
+      ellipse(pos.x,pos.y, this.radius,this.radius);
     }
   };
   
